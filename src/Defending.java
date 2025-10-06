@@ -1,3 +1,20 @@
+public class Defending extends AbstractState<Porradeiro> {
+    public Defending(Porradeiro character) {
+        super(character);
+    }
+
+    public void enter() {
+        character.Block();
+    }
+
+    public void execute() {
+        // Defesa dura só um turno
+    }
+
+    public void leave() {
+        System.out.println(character.getName() + " relaxa a guarda.");
+    }
+}
 public class Defending extends AbstractState<Juca> {
     private Bob bob;
     public Defending(Juca character) {
