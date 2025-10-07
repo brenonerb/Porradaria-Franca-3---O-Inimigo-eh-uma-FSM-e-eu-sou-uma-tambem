@@ -75,17 +75,16 @@ public class Porradeiro {
         Blocking = true;
     }
 
-    public void FinishTurn() {
+    public void Unblock() {
         Blocking = false;
-        System.out.println(name + " está com " + HP + " pontos de saúde!");
-        if (HP == 0) {
-            System.out.println(name + " foi nocauteado!");
-        }
+    }
+
+    public boolean getBlock() {
+        return Blocking;
     }
 
     public void update() {
         stateMachine.update();
-        FinishTurn();
     }
 
     public void setState(State<Porradeiro> newState) {

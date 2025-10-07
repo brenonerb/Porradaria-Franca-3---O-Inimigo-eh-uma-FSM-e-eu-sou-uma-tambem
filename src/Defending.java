@@ -8,10 +8,10 @@ public class Defending extends AbstractState<Porradeiro> {
     }
 
     public void execute() {
-        // Defesa dura só um turno
+        System.out.println(character.getName() + " está defendendo!");
     }
 
     public void leave() {
-        // Retorna ao estado zero
+        character.Unblock();
     }
 }

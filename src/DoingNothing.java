@@ -9,9 +9,10 @@ public class DoingNothing extends AbstractState<Porradeiro> {
 
     public void execute() {
         character.DoNothing();
+        System.out.println(character.getName() + ": 'Eu estou fazendo nada!'");
     }
 
     public void leave() {
-        // Fim do turno
+        System.out.println(character.getName() + ": 'Melhor voltar à luta...'");
     }
 }

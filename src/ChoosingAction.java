@@ -34,6 +34,6 @@ public class ChoosingAction extends AbstractState<Porradeiro> {
     }
 
     public void leave() {
-        // nada aqui
+        System.out.println(character.getName() + " decidiu!");
     }
 }

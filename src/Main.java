@@ -40,10 +40,8 @@ public class Main {
         System.out.println("SENHORAS E SENHORES, MENINOS, MENINAS E TODO O RESTO...");
         Await(1000);
         System.out.println("QUE A LUTA...");
-        Porradeiro1.setState(new DoingNothing(Porradeiro1));
         Await(1000);
         System.out.println("COMEÇE!");
-        Porradeiro2.setState(new DoingNothing(Porradeiro2));
         Await(1000);
 
         while (true) {
@@ -52,14 +50,18 @@ public class Main {
             System.out.println("==================== INÍCIO DE TURNO ====================");
             Porradeiro1.setState(new ChoosingAction(Porradeiro1, Porradeiro2));
             Porradeiro2.setState(new ChoosingAction(Porradeiro2, Porradeiro1));
+
             Await(1000);
 
             System.out.println("");
             System.out.println("==================== AÇÕES ====================");
-            Porradeiro1.update();
-            Await(3000);
-            Porradeiro2.update();
-            Await(3000);
+            for (int i = 0; i < 2; i++) {
+                Porradeiro1.update();
+                Porradeiro2.update();
+                Await(1000);
+            }
+
+            Await(1000);
 
             System.out.println("");
             System.out.println("==================== FIM DE TURNO ====================");
@@ -67,9 +69,15 @@ public class Main {
             // Condição de fim de luta
             if (Porradeiro1.getHP() <= 0 || Porradeiro2.getHP() <= 0) {
                 System.out.println("Luta acabou!");
+                if (Porradeiro1.getHP() <= 0) System.out.println("O vencedor é " + Porradeiro2.getName() + "!");
+                else System.out.println("O vencedor é " + Porradeiro1.getName() + "!");
                 break;
             }
-            else Await(1000);
+            else {
+                System.out.println(Porradeiro1.getName() + " está com " + Porradeiro1.getHP() + " pontos de saúde!");
+                System.out.println(Porradeiro2.getName() + " está com " + Porradeiro2.getHP() + " pontos de saúde!");
+                Await(3000);
+            }
         }
     }
 

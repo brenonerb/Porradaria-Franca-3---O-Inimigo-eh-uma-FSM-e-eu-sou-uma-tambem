@@ -10,8 +10,6 @@ public class StateMachine<C> {
     }
 
     public void update() {
-        if (currentState != null) {
-            currentState.execute();
-        }
+        currentState.execute();
     }
 }

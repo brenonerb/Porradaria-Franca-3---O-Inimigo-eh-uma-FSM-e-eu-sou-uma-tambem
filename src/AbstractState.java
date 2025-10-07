@@ -10,5 +10,6 @@ public abstract class AbstractState<C> implements State<C> {
     }
 
     public void enter() {}
+    public void execute() {}
     public void leave() {}
 }
