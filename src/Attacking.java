@@ -7,15 +7,14 @@ public class Attacking extends AbstractState<Porradeiro> {
     }
 
     public void enter() {
-        System.out.println(character.getName() + " prepara um ataque!");
+        System.out.println(character.getName() + " vai bater em " + target.getName() + "!");
     }
 
     public void execute() {
-        character.Attack(target, character.Damage);
-        target.TakeDamage(character.Damage);
+        // oi
     }
 
     public void leave() {
-        System.out.println(character.getName() + " termina o ataque!");
+        character.Attack(target, character.getDamage());
     }
 }

@@ -12,6 +12,6 @@ public class DoingNothing extends AbstractState<Porradeiro> {
     }
 
     public void leave() {
-        System.out.println("Fim do turno de " + character.getName() + "!");
+        // Fim do turno
     }
 }

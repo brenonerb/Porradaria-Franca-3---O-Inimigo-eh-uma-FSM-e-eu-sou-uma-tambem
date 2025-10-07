@@ -17,10 +17,18 @@ public class Porradeiro {
         Damage = dano;
     }
 
+    // Vamos dar um nomezinho pro nosso objeto...
+    public void setName(String newName) {
+        name = newName;
+    }
+
     // Variáveis que são chamadas
     public String getName() {
         return name;
     }
+    public int getDamage() { return Damage; }
+    public int getHP() { return HP; }
+
 
     // Ações que serão chamadas pelos estados do porradeiro
     public void DoNothing() {
@@ -28,10 +36,12 @@ public class Porradeiro {
     }
 
     public void Attack(Porradeiro target, int damage) {
+        System.out.println(name + " estou atacando!");
         // Ação de fato
+        target.TakeDamage(damage);
 
         // Texto bonitinho
-        System.out.println(name + " causa " + damage + " pontos de dano em " + target);
+        System.out.println(name + " causa " + damage + " pontos de dano em " + target.getName());
         int RandomPhrase = new Random().nextInt(5);
         switch (RandomPhrase) {
             case 0:
@@ -67,6 +77,7 @@ public class Porradeiro {
 
     public void FinishTurn() {
         Blocking = false;
+        System.out.println(name + " está com " + HP + " pontos de saúde!");
         if (HP == 0) {
             System.out.println(name + " foi nocauteado!");
         }
@@ -75,7 +86,6 @@ public class Porradeiro {
     public void update() {
         stateMachine.update();
         FinishTurn();
-        System.out.println(name + " está com " + HP + " pontos de saúde!");
     }
 
     public void setState(State<Porradeiro> newState) {
