@@ -52,7 +52,7 @@ public class Main {
             System.out.println("==================== INÍCIO DE TURNO ====================");
             Porradeiro1.setState(new ChoosingAction(Porradeiro1, Porradeiro2));
             Porradeiro2.setState(new ChoosingAction(Porradeiro2, Porradeiro1));
-            Await(3000);
+            Await(1000);
 
             System.out.println("");
             System.out.println("==================== AÇÕES ====================");
@@ -69,7 +69,7 @@ public class Main {
                 System.out.println("Luta acabou!");
                 break;
             }
-            else Await(3000);
+            else Await(1000);
         }
     }
 
