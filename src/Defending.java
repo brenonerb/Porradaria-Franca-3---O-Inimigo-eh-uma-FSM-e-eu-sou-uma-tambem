@@ -4,14 +4,17 @@ public class Defending extends AbstractState<Porradeiro> {
     }
 
     public void enter() {
+
         character.Block();
+        System.out.println(character.getName() + " está defendendo!");
     }
 
     public void execute() {
-        System.out.println(character.getName() + " está defendendo!");
+        // nada aqui
     }
 
     public void leave() {
         character.Unblock();
+        System.out.println(character.getName() + " para de se defender, pois o turno acabou!");
     }
 }

@@ -6,7 +6,7 @@ public class Main {
 
         System.out.println("PORRADARIA FRANCA 3 - O INIMIGO É UMA FSM E EU SOU UMA TAMBÉM");
 
-        Await(1000);
+        Await(3000);
 
         System.out.println("==================== SETUP DE STATUS ====================");
         // Setup do primeiro porradeiro
@@ -56,12 +56,13 @@ public class Main {
             System.out.println("");
             System.out.println("==================== AÇÕES ====================");
             for (int i = 0; i < 2; i++) {
+                System.out.println("");
                 Porradeiro1.update();
                 Porradeiro2.update();
-                Await(1000);
+                Await(3000);
             }
 
-            Await(1000);
+            Await(3000);
 
             System.out.println("");
             System.out.println("==================== FIM DE TURNO ====================");

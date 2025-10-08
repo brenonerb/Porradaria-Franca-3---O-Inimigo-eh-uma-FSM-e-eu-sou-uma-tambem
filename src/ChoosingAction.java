@@ -15,7 +15,7 @@ public class ChoosingAction extends AbstractState<Porradeiro> {
     public void execute() {
         if (character.getHP() > 0) {
             Random rand = new Random();
-            int choice = rand.nextInt(3); // 0 = Attack, 1 = Block, 2 = DoNothing
+            int choice = rand.nextInt(3);
 
             switch (choice) {
                 case 0:

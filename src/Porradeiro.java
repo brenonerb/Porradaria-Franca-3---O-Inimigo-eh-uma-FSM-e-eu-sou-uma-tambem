@@ -36,12 +36,12 @@ public class Porradeiro {
     }
 
     public void Attack(Porradeiro target, int damage) {
-        System.out.println(name + " estou atacando!");
         // Ação de fato
         target.TakeDamage(damage);
 
         // Texto bonitinho
-        System.out.println(name + " causa " + damage + " pontos de dano em " + target.getName());
+        if (target.getBlock() == true) System.out.println(name + " causa " + damage / 2 + " pontos de dano em " + target.getName() + "! Bom bloqueio!");
+        else System.out.println(name + " causa " + damage + " pontos de dano em " + target.getName() + "!");
         int RandomPhrase = new Random().nextInt(5);
         switch (RandomPhrase) {
             case 0:
