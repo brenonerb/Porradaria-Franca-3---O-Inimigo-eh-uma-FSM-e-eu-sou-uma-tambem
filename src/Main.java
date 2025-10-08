@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in); // Setta o Scanner
 
-        System.out.println("PORRADARIIA FRANCA 3 - O INIMIGO É UMA FSM E EU SOU UMA TAMBÉM");
+        System.out.println("PORRADARIA FRANCA 3 - O INIMIGO É UMA FSM E EU SOU UMA TAMBÉM");
 
         Await(1000);
 
